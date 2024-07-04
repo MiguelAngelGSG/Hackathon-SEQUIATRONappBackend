@@ -1,5 +1,4 @@
-public class droughtData {
-}
-
-
 package com.droughtAppBackend.models;
+
+public class Drought {
+}

@@ -1,4 +1,4 @@
 package com.droughtAppBackend.controllers;
 
-public class droughtAppBackendControllers {
+public class DroughtAppBackendControllers {
 }
