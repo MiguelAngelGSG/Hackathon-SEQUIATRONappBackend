@@ -24,4 +24,8 @@ public class DroughtAppBackendControllers {
 //    public <Drought> Optional<Drought> getDroughtById(@PathVariable("id")int id){
 //        return (Optional<Drought>) droughtServices.getDroughtById(id);
 //    }
+    @PutMapping(path = "/drought")
+    public Drought updateDrought(@RequestBody Drought Drought) {
+        return droughtServices.updateDrought(Drought);
+    }
 }
