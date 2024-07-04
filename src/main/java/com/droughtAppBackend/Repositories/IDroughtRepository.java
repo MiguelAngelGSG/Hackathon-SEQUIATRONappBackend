@@ -1,4 +1,7 @@
 package com.droughtAppBackend.Repositories;
 
-public interface IDroughtRepository {
+import com.droughtAppBackend.models.Drought;
+import org.springframework.data.repository.CrudRepository;
+
+public interface IDroughtRepository extends CrudRepository<Drought, Integer> {
 }
