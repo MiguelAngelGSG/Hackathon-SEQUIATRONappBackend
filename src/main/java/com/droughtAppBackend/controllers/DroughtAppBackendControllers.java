@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/drought-data")
-public class DroughtDataController {
+public class DroughtAppBackendControllers {
 
     @Autowired
     private DroughtDataService service;
 
-    // CREATE: POST endpoint
+    // CREATE: POST
     @PostMapping
     public ResponseEntity<DroughtData> createData(@RequestBody DroughtData data) {
         try {
