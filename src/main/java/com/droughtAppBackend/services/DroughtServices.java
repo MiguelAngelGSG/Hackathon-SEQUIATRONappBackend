@@ -24,3 +24,19 @@ public class DroughtServices {
         return iDroughtRepository.save(drought);
     }
 }
+
+    // CREATE
+public DroughtData createData(DroughtData data) {
+    return repository.save(data);
+}
+
+    // DELETE
+public boolean deleteData(Long id) {
+    if (repository.existsById(id)) {
+        repository.deleteById(id);
+        return true;
+    } else {
+        return false;
+    }
+}
+}
