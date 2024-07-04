@@ -32,11 +32,19 @@ public class DroughtAppBackendControllers {
 
     @PostMapping
     public ResponseEntity<DroughtData> createData(@RequestBody DroughtData data) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<HttpStatus> deleteData(@PathVariable Long id) {
         try {
             DroughtData newData = service.createData(data);
             return new ResponseEntity<>(newData, HttpStatus.CREATED);
+            if (service.deleteData(id)) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            } else {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
