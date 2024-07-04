@@ -1,10 +1,10 @@
-package com.droughtAppBackend;
+package com.droughtApp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DroughtAppBackendApplicationTests {
+class DroughtAppTests {
 
 	@Test
 	void contextLoads() {
