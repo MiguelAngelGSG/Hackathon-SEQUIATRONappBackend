@@ -20,6 +20,8 @@ public class DroughtServices {
 //    public <Drought> Optional<Drought> getDroughtById(int id) {
 //        return (Optional<Drought>) iDroughtRepository.findById(id);
 //    }
+
+//update
     public Drought updateDrought(Drought drought) {
         return iDroughtRepository.save(drought);
     }
